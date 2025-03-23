@@ -1,0 +1,17 @@
+ecommerce-backend/
+│── app/
+│   ├── main.py          # The starting point of our app (runs FastAPI)
+│   ├── database.py      # Connects to PostgreSQL database
+│   ├── models.py        # Defines tables (Users, Products, Cart, Orders)
+│   ├── schemas.py       # Defines input and output data (validation)
+│   ├── routes/
+│   │   ├── auth.py      # Handles signup & login
+│   │   ├── products.py  # Handles adding/viewing products
+│   │   ├── cart.py      # Handles cart functionality
+│   │   ├── orders.py    # Handles order placement
+│   ├── utils/
+│   │   ├── hashing.py   # Password encryption
+│   │   ├── jwt.py       # JWT Token generation
+│── Dockerfile           # For containerizing our app
+│── .env                 # Stores database credentials
+│── requirements.txt     # List of dependencies
