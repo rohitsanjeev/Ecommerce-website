@@ -34,7 +34,26 @@ car = Car()
 car.start_engine()
 
 
-# reached home today please complete oops tmre!!!!!!!!!
+# reached home today please complete oops tmrw!!!!!!!!
+# -----> polymorphism ------<
+
+#one function, different behaviour
+#one functions behaves differently for differnet objects.
+
+class Bird:
+    def fly(self):
+        print("birds can fly")
+class Penguin:
+    def fly(self):
+        print("penguins cannot fly")
+#crerate instance
+bird = Bird()
+penguin = Penguin()
+
+
+bird.fly()
+penguin.fly()
+
 
 
 
