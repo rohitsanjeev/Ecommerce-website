@@ -40,19 +40,43 @@ car.start_engine()
 #one function, different behaviour
 #one functions behaves differently for differnet objects.
 
-class Bird:
-    def fly(self):
-        print("birds can fly")
-class Penguin:
-    def fly(self):
-        print("penguins cannot fly")
-#crerate instance
-bird = Bird()
-penguin = Penguin()
+# class Bird:
+#     def fly(self):
+#         print("birds can fly")
+# class Penguin:
+#     def fly(self):
+#         print("penguins cannot fly")
+# #crerate instance
+# bird = Bird()
+# penguin = Penguin()
 
 
-bird.fly()
-penguin.fly()
+# bird.fly()
+# penguin.fly()
+
+
+#__________>ABSTACTION<_____________
+
+from abc import ABC, abstractmethod #imported ABC module for abstaction
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):  #abstact method (no implementation here)
+        pass     #this must be implemented in  child class
+    #creating child classes
+class Dog(Animal):
+    def sound(self):
+            print("dog barks!")
+class Cat(Animal):
+    def sound(self):
+            print("cat meows!")
+
+#creating instances
+dog = Dog()
+cat = Cat()
+
+dog.sound()
+
+cat.sound()
 
 
 
